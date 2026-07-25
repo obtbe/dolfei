@@ -137,6 +137,27 @@ body {
 }
 
 /* ===========================
+   Footer
+=========================== */
+
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 1.5rem;
+
+    text-align: center;
+
+    font-size: .75rem;
+    font-weight: 400;
+    letter-spacing: -.01em;
+
+    color: #9CA3AF;
+
+    pointer-events: none;
+}
+
+/* ===========================
    Animations
 =========================== */
 
@@ -172,4 +193,4 @@ body {
         transform: translateY(0);
     }
 
-}   
+}
