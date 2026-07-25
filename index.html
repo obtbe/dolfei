@@ -20,11 +20,48 @@
             <img src="assets/logo.svg" alt="Dolfei Logo" class="logo">
         </div>
 
-        <h1>Dolfei</h1>
+        <div class="headline">
+            <div class="static">What if</div>
 
-        <p>Worth waiting for.</p>
+            <div class="dynamic-wrapper">
+                <span id="dynamic" class="dynamic">
+                    the future weren't fixed.
+                </span>
+            </div>
+        </div>
 
     </main>
+
+    <script>
+        const phrases = [
+            "the future weren't fixed.",
+            "risk had a shape.",
+            "certainty was measurable.",
+            "patterns spoke first.",
+            "probabilities had a voice.",
+            "complexity became simple.",
+            "every decision had context.",
+            "uncertainty wasn't random."
+        ];
+
+        const dynamic = document.getElementById("dynamic");
+        let index = 0;
+
+        setInterval(() => {
+
+            dynamic.classList.add("fade-out");
+
+            setTimeout(() => {
+
+                index = (index + 1) % phrases.length;
+                dynamic.textContent = phrases[index];
+
+                dynamic.classList.remove("fade-out");
+
+            }, 250);
+
+        }, 3200);
+    </script>
 
 </body>
 
