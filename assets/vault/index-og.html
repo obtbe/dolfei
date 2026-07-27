@@ -17,7 +17,7 @@
     <main class="hero">
 
         <div class="logo-container">
-            <img src="assets/logo.svg" alt="Dolfei Logo" class="logo" id="logo">
+            <img src="assets/logo.svg" alt="Dolfei Logo" class="logo">
         </div>
 
         <div class="headline">
@@ -47,13 +47,11 @@
         ];
 
         const dynamic = document.getElementById("dynamic");
-        const logo = document.getElementById("logo");
         let index = 0;
 
         setInterval(() => {
 
             dynamic.classList.add("fade-out");
-            logo.classList.add("rotate");
 
             setTimeout(() => {
 
@@ -61,7 +59,6 @@
                 dynamic.textContent = phrases[index];
 
                 dynamic.classList.remove("fade-out");
-                logo.classList.remove("rotate");
 
             }, 250);
 
